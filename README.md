@@ -72,6 +72,12 @@ console.log(JSON.stringify(s));
 // > {"min":3,"max":6,"mean":4,"variance":2,"stdDev":1.4142135623730951,"count":3}
 ```
 
+```
+var s = new running_stats.Stats([3,3,6]);
+console.log(JSON.stringify(s));
+// > {"min":3,"max":6,"mean":4,"variance":2,"stdDev":1.4142135623730951,"count":3}
+```
+
 ## Installation
 
 ```
