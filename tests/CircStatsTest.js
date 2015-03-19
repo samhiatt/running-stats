@@ -1,16 +1,19 @@
 var running_stats = require('./../lib/index');
 
-exports.testCircStats = function(test) {
-	var cs = new running_stats.CircStats();
-	cs.push(0);
-	cs.push(360);
-	cs.push(90,2);
-
+var checkResult = function(test,cs){
 	test.ok(cs.mean-45<0.000000001, "Mean = 45");
 	test.equals(cs.variance, 0.29289321881345254, "Variance = 0.29289321881345254");
 	test.equals(cs.count, 4, "Count = 4");
 
 	test.done();
+};
+
+exports.testCircStats = function(test) {
+	var cs = new running_stats.CircStats();
+	cs.push(0);
+	cs.push(360);
+	cs.push(90,2);
+	checkResult(test, cs);
 };
 
 exports.testInitializationWithCircStats = function(test) {
@@ -21,11 +24,7 @@ exports.testInitializationWithCircStats = function(test) {
 	var cs = new running_stats.CircStats(s);
 	cs.push(90,2);
 
-	test.ok(cs.mean-45<0.000000001, "Mean = 45");
-	test.equals(cs.variance, 0.29289321881345254, "Variance = 0.29289321881345254");
-	test.equals(cs.count, 4, "Count = 4");
-
-	test.done();
+	checkResult(test, cs);
 };
 
 exports.testCircStatsInitializationWithInitValues = function(test) {
@@ -34,9 +33,5 @@ exports.testCircStatsInitializationWithInitValues = function(test) {
 	var cs = new running_stats.CircStats(s);
 	cs.push(90,2);
 
-	test.ok(cs.mean-45<0.000000001, "Mean = 45");
-	test.equals(cs.variance, 0.29289321881345254, "Variance = 0.29289321881345254");
-	test.equals(cs.count, 4, "Count = 4");
-
-	test.done();
+	checkResult(test, cs);
 };
