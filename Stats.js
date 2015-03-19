@@ -1,4 +1,4 @@
-module.exports.Stats = function(val, weight) {
+module.exports = function(val, weight) {
 	this.count=0;
 	this.mean=null;
 	this.min=null;
