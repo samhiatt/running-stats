@@ -7,9 +7,9 @@
     "directional statistics",
     "circular statistics"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "node_modules/nodeunit/bin/nodeunit tests.js"
+    "test": "node_modules/nodeunit/bin/nodeunit tests/*.js"
   },
   "repository":"https://github.com/samhiatt/running-stats.git",
   "author": {"name":"Sam Hiatt","email":"samhiatt@gmail.com"},
