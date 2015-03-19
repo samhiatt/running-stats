@@ -11,6 +11,7 @@
   "scripts": {
     "test": "node_modules/nodeunit/bin/nodeunit tests.js"
   },
+  "repository":"https://github.com/samhiatt/running-stats.git",
   "author": "Sam Hiatt, sam.hiatt@weather.com",
   "license": "MIT",
   "devDependencies": {
