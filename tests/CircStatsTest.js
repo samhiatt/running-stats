@@ -35,3 +35,12 @@ exports.testCircStatsInitializationWithInitValues = function(test) {
 
 	checkResult(test, cs);
 };
+
+exports.testCircStatsInitializationWithInitValuesByArray = function(test) {
+	var s = new running_stats.CircStats([360,0]);
+
+	var cs = new running_stats.CircStats(s);
+	cs.push([90],2);
+
+	checkResult(test, cs);
+};
