@@ -15,7 +15,6 @@
   "author": {"name":"Sam Hiatt","email":"samhiatt@gmail.com"},
   "license": "MIT",
   "devDependencies": {
-    "nodeunit": "^0.9.1",
-    "typescript": "^1.4.1"
+    "nodeunit": "^0.9.1"
   }
 }
