@@ -2,14 +2,19 @@
   "name": "running-stats",
   "version": "0.0.0",
   "description": "Calculate running statistics from a stream of data. Includes directional statistics, for circular values (degrees).",
-  "keywords":["statistics","directional statistics","circular statistics"],
+  "keywords": [
+    "statistics",
+    "directional statistics",
+    "circular statistics"
+  ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/nodeunit/bin/nodeunit tests.js"
   },
   "author": "Sam Hiatt, sam.hiatt@weather.com",
   "license": "MIT",
   "devDependencies": {
+    "nodeunit": "^0.9.1",
     "typescript": "^1.4.1"
   }
 }
