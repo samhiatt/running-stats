@@ -1,4 +1,4 @@
-var running_stats = require('.');
+var running_stats = require('./index');
 
 exports.testStats = function(test){
 
